@@ -1,0 +1,118 @@
+/* FreeHead — one stylesheet for the whole site.
+   Mobile first: Apple reviews the support page on an iPhone. */
+
+:root {
+  --blue: #1c74d1;
+  --blue-dark: #155ca8;
+  --ink: #16181d;
+  --muted: #5c6270;
+  --line: #e4e7ec;
+  --bg: #ffffff;
+  --card: #f7f8fa;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --blue: #5f97cf;
+    --blue-dark: #8ab4e4;
+    --ink: #ecedef;
+    --muted: #a2a8b4;
+    --line: #2c2f36;
+    --bg: #16181d;
+    --card: #1e2128;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 0 24px 72px;
+  background: var(--bg);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 660px; margin: 0 auto; }
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 40px 0 8px;
+}
+
+header img { width: 60px; height: 60px; border-radius: 14px; }
+
+header .name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  margin: 32px 0 12px;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  margin: 40px 0 10px;
+}
+
+h3 {
+  font-size: 17px;
+  margin: 28px 0 6px;
+}
+
+p { margin: 0 0 16px; }
+
+.lead { font-size: 20px; color: var(--muted); }
+
+a { color: var(--blue); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+ul { padding-left: 22px; margin: 0 0 16px; }
+li { margin-bottom: 7px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 22px 24px;
+  margin: 24px 0;
+}
+
+.contact {
+  display: inline-block;
+  background: var(--blue);
+  color: #fff;
+  font-weight: 600;
+  padding: 13px 24px;
+  border-radius: 999px;
+  margin-top: 4px;
+}
+.contact:hover { background: var(--blue-dark); text-decoration: none; }
+
+@media (prefers-color-scheme: dark) {
+  .contact { color: #12161c; }
+}
+
+.muted { color: var(--muted); }
+.small { font-size: 15px; }
+
+nav {
+  border-top: 1px solid var(--line);
+  margin-top: 56px;
+  padding-top: 22px;
+  font-size: 15px;
+  color: var(--muted);
+}
+nav a { margin-right: 18px; }
